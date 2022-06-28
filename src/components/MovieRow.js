@@ -9,7 +9,7 @@ export default ({title, items}) => {
         if (x > 0) {
             x = 0
         }
-        setScrollX(x)
+        setScrollX(x);
     }
 
     const handleRigthArrow = () => {
@@ -18,8 +18,20 @@ export default ({title, items}) => {
         if((window.innerWidth - listW) > x) {
             x= (window.innerWidth - listW) -60
         }
-        setScrollX(x)
+        setScrollX(x);
     }
-
-    return(<div></div>)
+    return (
+        <div className="movieRow">
+            <h2>{title}</h2>
+            <div className="movieRow--listarea">
+                <div className="movieRow--list" style={{width : 10000}}>
+            {items.results.length > 0 && items.results.map((item, key) => (
+                <div className="movieRow--item" key="key">
+                    <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.orginal_title} />
+                </div>
+            ))}
+            </div>
+            </div>
+        </div>
+    )
 }
