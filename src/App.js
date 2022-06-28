@@ -8,6 +8,7 @@ export default () => {
     useEffect(() => {
         const loadAll = async () => {
             let list = await Tmdb.getHomeList();
+            console.log(list)
         }
 
         loadAll();
