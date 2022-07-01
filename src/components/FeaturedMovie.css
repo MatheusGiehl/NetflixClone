@@ -31,10 +31,54 @@
     margin-top: 15px;
 }
 
+.featured--info div {
+    display: inline-block;
+    margin-right: 15px;
+}
+
 .featured--points {
     color: #46D389;
 }
 
-.featured--year {
-    
+.featured--description {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+}
+
+.featured--buttons {
+    margin-top: 15px;
+}
+
+.featured--buttons a {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 1;
+    transition: all ease 0.2s;
+}
+
+.featured--buttons a:hover {
+    opacity: 0.7;
+}
+
+.featured--watchbtn {
+    background-color: #FFF;
+    color: #000;
+}
+
+.featured--listbtn {
+    background-color: #333;
+    color: #FFF     ;
+}
+
+.featured--genres {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #999;
 }
