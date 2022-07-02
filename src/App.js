@@ -3,10 +3,12 @@ import './App.css';
 import Tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
+import Header from './components/Header';
 
 export default () => {
     const [movieList, setMovieList] = useState([]);
     const [featuredData, setFeaturedData] =  useState(null);
+    const [blackHeader, setBlackHeader] = useState(false);
     
     useEffect(() => {
         const loadAll = async () => {
@@ -23,8 +25,28 @@ export default () => {
 
         loadAll();
     }, []);
+
+
+    useEffect(() => {
+        const scrollListener = () => {
+            if(window.scrollY > 10) {
+                setBlackHeader(true)
+            } else {
+                setBlackHeader(false)
+            }
+        }
+
+        window.addEventListener('scroll', scrollListener)
+
+        return () => {
+            window.addEventListener('scroll', scrollListener)
+        }
+    })
+
     return(
         <div className="page">
+            <Header black={blackHeader} />
+
             {featuredData &&
             < FeaturedMovie item={featuredData} />
             }
@@ -33,6 +55,16 @@ export default () => {
                 <MovieRow key={key} title={item.title} items={item.items} />
                 )}
             </div>
+            <footer>
+                Feito por Matheus Giehl <br/>
+                Direitos de imagem: NetFlix <br/>
+                Dados: Themoviedb.org 
+            </footer>
+            { movieList.length <= 0 &&
+              <div className="loading">
+                <img src="https://media.wired.com/photos/592744d3f3e2356fd800bf00/master/w_2560%2Cc_limit/Netflix_LoadTime.gif" alt="carregando" /> 
+                </div>
+            }
         </div>
     )
 }
