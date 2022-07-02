@@ -26,3 +26,32 @@
 .movieRow--item img:hover {
     transform: scale(1);
 }
+
+.movieRow--right,
+.movieRow--left {
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 06.);
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+
+.movieRow--left {
+    left: 0;
+}
+
+.movieRow--right {
+    right: 0;
+}
+
+.movieRow:hover .movieRow--right,
+.movieRow:hover .movieRow--left {
+    opacity: 1;
+}
