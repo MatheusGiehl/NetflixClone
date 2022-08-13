@@ -1,7 +1,6 @@
 import React from 'react'
 import './FeaturedMovie.css';
 
-
 export default ({item}) => {
 
     let firstDate = new Date(item.first_air_date)
@@ -34,8 +33,8 @@ export default ({item}) => {
                     </div>
                     <div className="featured--description">{description}</div>
                     <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`} className="featured--watchbtn">Assistir</a>
-                        <a href={`/list/add/${item.id}`} className="featured--listbtn">Minha Lista</a>
+                        <a href={`/watch/${item.id}`} className="featured--watchbtn"> ▶ Assistir</a>
+                        <a href={`/list/add/${item.id}`} className="featured--listbtn"> + Minha Lista</a>
                     </div>
                     <div className="featured--genres">
                         <strong>Gêneros: </strong> {genres.join(',') }
