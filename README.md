@@ -1,9 +1,10 @@
 
 
-<h2 align="center">
- <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"  alt="Netlix"/>
-Projeto Clone da Netflix feito em React.js
-</h2> 
+<div align="center">
+ <img width="40%"src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"  alt="Netlix"/>
+<h2>Projeto Clone da Netflix feito em React.js</h2>
+</div>
+
 
 #
 **Pré-requisitos**
