@@ -5,6 +5,9 @@
 <h2>Projeto Clone da Netflix feito em React.js</h2>
 </div>
 
+<div align="center">
+<img width="80%" src="https://github.com/MatheusGiehl/NetflixClone/blob/main/to_readme/Readme.gif">
+</div>
 
 #
 **Pré-requisitos**
